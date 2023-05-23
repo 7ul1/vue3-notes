@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /* border: 2px solid #17a717; */
+            width: 400px;
+            /* 控制表格的列宽 */
+            table-layout: fixed;
+
+
+            /* 控制单元格间距(生效的前提是不合并单元格) */
+            border-spacing: 5px;
+
+            /* 合并相邻的单元格的边框 */
+            /* collapse合并单元格边框 */
+            /* separate不合并单元格边框 */
+            border-collapse: collapse;
+
+            /* 隐藏没有内容的单元格(生效的前提是不能合并单元格) */
+            empty-cells: hide;
+        }
+        th,td{
+            text-align: center;
+            border: 2px dashed #32131A;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>欢迎回来</caption>
+        <head>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>薪资</th>
+            </tr>
+        </head>
+        <body>
+            <tr>
+                <td>1</td>
+                <td>小明</td>
+                <td>18</td>
+                <td>9k</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td>81</td>
+                <td>10k</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Tom</td>
+                <td>90</td>
+                <td>90k</td>
+            </tr>
+        </body>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let person = {
+            name:'小明',
+            age:18,
+
+        }
+/*         let p = {}
+        // 对name进行数据代理
+        Object.defineProperty(p,'name',{
+            // 允许删除
+            configurable:true,
+            get(){
+                // get里需要有返回值
+                console.log('name被调用了');
+                return person.name
+            },
+            set(value){
+                console.log('name的值被修改了');
+                person.name = value
+            }
+        })
+        // 对age进行数据代理
+        Object.defineProperty(p,'age',{
+            get(){
+                // get里需要有返回值
+                console.log('age被调用了');
+                return person.age
+            },
+            set(value){
+                console.log('age的值被修改了');
+                person.age = value
+            }
+        })
+         */
+
+        // vue3数据代理
+            const p = new Proxy(person,{
+            // 有人读取p的某属性就调用
+            get(target,propKey,receiver){
+                // console.log('被调用了',target,propKey,receiver);
+                console.log(`有人读取了p身上的${propKey}属性`);
+                // 这里要用 [] 而不是 . 因为读取的是target里的propkey 如果用.就是读取target里的propkey属性 但它身上并没有，要把propkey当成变量看待，所以用[]
+                // return target[propKey]
+                return Reflect.get(target,propKey)
+            },
+            // 有人修改p的属性或给p追加某属性就调用
+            set(target,propKey,value,receiver){
+                // console.log('&&&&&&&',target,propKey,value,receiver);
+                console.log(`有人读取了p身上的${propKey}属性，并且修改后的值是${value},我要去更新了`);
+                // target[propKey] = value
+                Reflect.set(target,propKey,value)
+            },
+            // 有人删除p的某属性就调用
+            deleteProperty(target,propKey){
+                console.log(`有人删除了p身上的${propKey}属性,我要去更新了`);
+                // console.log(target,propKey);
+                // delete target[propKey]
+                // return delete target[propKey]
+                return Reflect.deleteProperty(target,propKey)
+
+            }
+        })
+
+        // let obj = {a:100,b:200}
+
+        // 通过Object反射对象实现数据增删改查
+        // Object.defineProperty(obj,'c',{
+        //     get(){
+        //         return 300
+        //     }
+        // })
+
+        // Object.defineProperty(obj,'c',{
+        //     get(){
+        //         return 400
+        //     }
+        // })
+
+        /* -------------- */
+
+        // 通过Reflect反射对象实现数据增删改查
+/*         const j = Reflect.defineProperty(obj,'c',{
+            get(){
+                return 300
+            }
+        })
+        
+        const j2 = Reflect.defineProperty(obj,'c',{
+            get(){
+                return 400
+            }
+        })
+         */
+        // console.log(j);
+        // console.log(j2);
+
+        // if (j2) {
+        //     console.log(j2);
+        // }else{
+        //     console.error('错了');
+        // }
+    </script>
+</body>
+</html>
+

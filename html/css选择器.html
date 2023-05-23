@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* [type]{
+            color: red;
+        } */
+
+        /* pre+fieldset{
+            color: blue;
+        }
+        pre~fieldset{
+            color: blue;
+        } */
+
+        /* fieldset>label{
+            color: aqua;
+        } */
+
+        /* [title="radio"]{
+            color: blueviolet;
+        } */
+
+        /* title属性，且属性值的第一个字母是以r开头的 */
+        /* [title^="r"]{
+            color: aliceblue;
+        } */
+
+        /* title属性，且属性值的最后一个字母是以u结尾的 */
+        /* [title$="u"]{
+            color: aliceblue;
+        } */
+
+        /* title属性，选中其属性值里只要包含u的 */
+        /* [title*="u"]{
+            color: aliceblue;
+        } */
+    </style>
+    
+</head>
+<body>
+    <pre title="abu">
+        eqweqw eqwewqeqw eqwewqeqw
+        e                                eqwe
+    </pre>
+
+    <fieldset title="abu">
+        <legend>主要信息</legend>
+        <label for="a">账户：</label><input  id="a" type="text" value="2132" placeholder="3213131" maxlength="5" >
+        <input type="radio" name="sex" checked value="男">男 <input type="radio" name="sex" value="女">女
+        <button>提交</button>
+    </fieldset>
+    <fieldset title="abu">
+        <legend>次要信息</legend>
+        <input type="submit">
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+    </fieldset>
+</body>
+</html>

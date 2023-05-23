@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* a{
+            font-size: 50px;
+        } */
+        /* :link 未访问过的链接 */
+        /* a:link{
+            color: pink;
+        } */
+
+        /* :visited 访问过的链接 */
+        /* a:visited{
+            color: orange;
+        } */
+
+
+        /* :link + :visited 是a链接独有的状态 */
+
+
+        /* :hover 鼠标悬浮在a链接上是变换为天蓝色 */
+        /* a:hover{
+            color: skyblue;
+        } */
+
+        /* :active 鼠标按下后a链接变为紫色 */
+        /* a链接被激活触发 */
+        /* a:active{
+            color: purple;
+        } */
+
+        /* focus只应用于可以获取焦点类的表单元素     */
+        /* input:focus{
+            background: #999;
+        } */
+
+        /* 伪类选择器-结构伪类
+        div p:first-child{
+            color: red;
+        } */
+
+        /* 选中div里的第一个p这种类型的元素 */
+        /* div p:first-of-type{
+            color: red;
+        }
+
+        div:empty{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        } */
+
+        /* div>p:not(.fail){
+            color: red;
+        } */
+
+        /* div>p:not([title^="你"]){
+            color: red;
+        } */
+
+        /* div>p:not(:first-child) {
+            color: red;
+        } */
+
+        /* input:checked{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        input:disabled{
+            background-color: gray;
+        }
+
+        input:enabled{
+            background-color: antiquewhite;
+        }
+
+        div{
+            width: 500px;
+            height: 200px;
+            border: 1px solid #222;
+        }
+
+        div:target{
+            background-color: green;
+        } */
+        /* input:focus{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        } */
+
+
+        div::first-letter{
+            color: red;
+            font-size: 50px;
+        }
+
+        div::first-line{
+            background-color: antiquewhite;
+        }
+
+        div::selection{
+            background-color: aquamarine;
+        }
+
+        input{
+            outline: none;
+        }
+        input::placeholder{
+            color: gray;
+            font-size: 12px;
+        }
+        p::before{
+            content: '￥';
+        }
+        p::after{
+            content: '.00';
+        }
+
+        p{
+            color: green;
+            color: rgb(1, 0, 0);
+            color: rgba(1, 0, 0,0.5);
+            color: #A5A6A6;
+            color: #A5A6A6F9;
+            color: hsl(60deg, 80%, 50%);
+        }
+
+        p{
+            /* 字母间距 */
+            letter-spacing: 20px;
+
+            /* 单词间距 */
+            /* 对中文是不起作用的 */
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi similique iste ratione et obcaecati officia delectus, fuga error dicta repellat possimus laboriosam placeat, ipsam molestiae minima dolores, nesciunt excepturi accusamus voluptatem maiores beatae? Necessitatibus, dicta. Reprehenderit cupiditate, ducimus aut, optio repellat ipsum asperiores a perspiciatis doloremque natus nam quaerat tempora reiciendis vitae nobis. Impedit optio atque illo! Sunt atque ullam necessitatibus tempore inventore eaque, perferendis minus exercitationem doloremque laborum voluptates ipsum nostrum, repellendus ea fugiat! Dignissimos in tempore neque.
+    </div>
+    <br>
+    <input type="text" placeholder="欢迎输入">
+    <p>199</p>
+    <p>299</p>
+    <p>399</p>
+
+
+
+    <!-- <a href="#">地址-ONE</a>
+    <a href="#1">地址-TWO</a>
+    <a href="#2">地址-Three</a>
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text"> -->
+<!-- 
+        <input type="checkbox">
+        <input type="text">
+        <input type="text" disabled>
+        <br>
+        <a href="#one">第一个</a>
+        <a href="#two">第二个</a>
+        <a href="#three">第三个</a>
+        <br>
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div> -->
+
+    <!-- <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p class="fail" title="你好啊">4</p>
+        <p class="fail" title="你好啊">5</p>
+    </div> -->
+
+    <!-- <div>
+        <p>1</p>
+        <p>2</p>
+        <div>
+            <p>3</p>
+            <p>3-01</p>
+        </div>
+        <p>4</p>
+        <p>5</p>
+    </div> -->
+</body>
+</html>

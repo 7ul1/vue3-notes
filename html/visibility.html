@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 1000px;
+        }
+        .clearFloat::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box{
+            width: 960px;
+            margin: 10px auto;
+        }
+        .header{
+            /* background-color: pink; */
+            width: 100%;
+            height: 130px;
+        }
+        .logo{
+            float: left;
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            background-color: #DDDDDD;
+        }
+        .banner1{
+            margin-left: 10px;
+            float: left;
+            width: 540px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            background-color: #DDDDDD;
+        }
+        .banner2{
+            float: right;
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            background-color: #DDDDDD;
+        }
+        .menu{
+            float: left;
+            margin: 10px 0;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #DDDDDD;
+        }
+        .list{
+            width: 100%;
+            height: 410px;
+            /* background-color: #653422; */
+        }
+        .left{
+            float: left;
+            width: 760px;
+        }
+        .top{
+            float: left;
+            width: 760px;
+        }
+        .top .item1,.item2{
+            /* background-color: aqua; */
+            border: 1px solid #222;
+            margin-right: 10px;
+            float: left;
+            width: 366px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .footer{
+            float: left;
+            margin-top: 10px;
+            width: 760px;
+        }
+        .footer .item3,.item4,.item5,.item6{
+            /* background-color: aquamarine; */
+            border: 1px solid #222;
+            margin-right: 10px;
+            float: left;
+            width: 177px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .right{
+            float: right;
+            width: 200px;
+            /* height: 100%; */
+        }
+        .right .item7,.item8,.item9{
+            margin-bottom: 10px;
+            /* float: right; */
+            width: 200px;
+            height: 129px;
+            line-height: 130px;
+            text-align: center;
+            /* background-color: beige; */
+            border: 1px solid #222;
+            
+        }
+
+        .item9{
+            margin-bottom: 0;
+        }
+
+        .foot{
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            margin-top: 15px;
+            /* background-color: aqua; */
+            /* border: 1px solid #222; */
+            background-color: #DDDDDD;
+        }
+    </style>
+</head>
+<body>
+    <!-- 思路：给需要浮动的盒子都再套一层盒子为父亲，并对其添加清除浮动显示出其高度，防止后续盒子出现问题 -->
+    <div class="box">
+        <div class="header">
+            <div class="logo">logo</div>
+            <div class="banner1">banner1</div>
+            <div class="banner2">banner2</div>
+            <div class="menu">菜单</div>
+        </div>
+        <div class="list">
+            <div class="left">
+                <div class="top clearFloat">
+                    <div class="item1">栏目一</div>
+                    <div class="item2">栏目二</div>
+                </div>
+                <div class="footer clearFloat">
+                    <div class="item3">栏目三</div>
+                    <div class="item4">栏目四</div>
+                    <div class="item5">栏目五</div>
+                    <div class="item6">栏目六</div>
+                </div>
+            </div>
+            <div class="right clearFloat">
+                <div class="item7">栏目七</div>
+                <div class="item8">栏目八</div>
+                <div class="item9">栏目九</div>
+            </div>
+        </div>
+        <div class="foot">页脚</div>
+
+    </div>
+</body>
+</html>
